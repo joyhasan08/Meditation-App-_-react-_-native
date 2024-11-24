@@ -12,6 +12,9 @@ export default function details() {
     <View>
       <Text> details page {id}</Text>
       <Text> details page {mediData?.title}</Text>
+      <Text> details page {mediData?.description}</Text>
+      <Text> details page {mediData?.duration}</Text>
+      <Text> details page {mediData?.type}</Text>
       <View>
 
       </View>
