@@ -11,7 +11,7 @@ const RootLayout = () => {
     <Stack>
         <Stack.Screen  name="index" options={{title: "Home"}}/>
         <Stack.Screen  name="about" options={{title: "About"}}/>
-        <Stack.Screen  name="meditationSreen" options={{title: "Meditation"}}/>
+        <Stack.Screen  name="meditationSreen/[id]" options={{title: "Meditation" ,headerShown:false ,animation:"slide_from_bottom" ,animationDuration:200}}/>
     </Stack>
   )
 }
