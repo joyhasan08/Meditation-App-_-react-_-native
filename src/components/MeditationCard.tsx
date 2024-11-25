@@ -17,13 +17,13 @@ export  function meditationList(item : Meditation) {
 
             <View className="flex-row items-center justify-end bg-green-300  rounded-b-xl">
 
-                <View className="flex-row items-center p-2">
+                <View className="flex-row items-center ">
                  <AntDesign name="file1" size={16} color="black" />
                  <Text className="p-2">{item.type}</Text>
                 </View>
             
 
-                <View className="flex-row items-center p-2">
+                <View className="flex-row items-center ">
                  <AntDesign name="clockcircleo" size={16} color="black" />
                  <Text className="p-2">{item.duration} min </Text>
                 </View>

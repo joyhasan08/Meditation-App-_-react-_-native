@@ -40,5 +40,45 @@ export const meditation: Meditation[] = [
         description: 'A brief session that teaches breathing techniques to improve focus.',
         type: 'video',
         pro: false
+    },
+    {
+        id: 6,
+        title: 'Self-Love Meditation',
+        duration: 25, // in minutes
+        description: 'A meditation focused on cultivating self-love and compassion.',
+        type: 'audio',
+        pro: false
+    },
+    {
+        id: 7,
+        title: 'Mindful Walking Meditation',
+        duration: 30, // in minutes
+        description: 'A guided session that helps you practice mindfulness while walking.',
+        type: 'audio',
+        pro: false
+    },
+    {
+        id: 8,
+        title: 'Meditation for Anxiety Relief',
+        duration: 20, // in minutes
+        description: 'A calming session designed to help alleviate anxiety and stress.',
+        type: 'video',
+        pro: false
+    },
+    {
+        id: 9,
+        title: 'Progressive Muscle Relaxation',
+        duration: 40, // in minutes
+        description: 'A session focused on relaxing the body through progressive muscle relaxation techniques.',
+        type: 'audio',
+        pro: true
+    },
+    {
+        id: 10,
+        title: 'Gratitude Meditation',
+        duration: 15, // in minutes
+        description: 'A short practice to cultivate gratitude and appreciation in your life.',
+        type: 'video',
+        pro: false
     }
-]
+];

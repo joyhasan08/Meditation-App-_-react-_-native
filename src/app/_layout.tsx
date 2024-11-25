@@ -9,7 +9,7 @@ const RootLayout = () => {
     //   <Text style={{color:"red"}}>_layout</Text>
     // </View>
     <Stack>
-        <Stack.Screen  name="index" options={{title: "Home"}}/>
+        <Stack.Screen  name="index" options={{title: "Home",headerShown:false}}/>
         <Stack.Screen  name="about" options={{title: "About"}}/>
         <Stack.Screen  name="meditationSreen/[id]" options={{title: "Meditation" ,headerShown:false ,animation:"slide_from_bottom" ,animationDuration:200}}/>
     </Stack>
