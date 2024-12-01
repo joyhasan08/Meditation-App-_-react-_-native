@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { Stack } from 'expo-router'
+import { Stack, Tabs } from 'expo-router'
 import '../../global.css'
 
 const RootLayout = () => {
@@ -12,6 +12,10 @@ const RootLayout = () => {
         <Stack.Screen  name="index" options={{title: "Home",headerShown:false}}/>
         <Stack.Screen  name="about" options={{title: "About"}}/>
         <Stack.Screen  name="meditationSreen/[id]" options={{title: "Meditation" ,headerShown:false ,animation:"slide_from_bottom" ,animationDuration:200}}/>
+      
+        <Tabs/>
+        <Tabs.Screen  name="About" options={{title: "Tabs" ,}}/>
+        <Tabs/>
     </Stack>
   )
 }
