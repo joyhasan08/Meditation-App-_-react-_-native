@@ -37,7 +37,7 @@ export default function HomeScreen() {
              data={meditation} 
              renderItem={({item}) => meditationList(item)} />
 
-        {/* <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2  " href="/about">about page</Link> */}
+        <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2 w-fit  " href="/about">about page</Link>
 
         
        </SafeAreaView>
