@@ -15,7 +15,8 @@ export  function meditationList(item : Meditation) {
             <Text className="text-xl font-semibold p-2" >{item.title}</Text>
             <Text className="p-2">{item.description}</Text>
 
-            <View className="flex-row items-center justify-end bg-green-300  rounded-b-xl">
+            <View className="flex-row items-center 
+             justify-end bg-green-300  rounded-b-xl">
 
                 <View className="flex-row items-center ">
                  <AntDesign name="file1" size={16} color="black" />
