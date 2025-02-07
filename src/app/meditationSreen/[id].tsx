@@ -9,7 +9,7 @@ export default function details() {
   // for data fetch
   const mediData = meditation.find((item) => item.id == Number(id))
   return (
-    <SafeAreaView className='flex-1  '>
+    // <SafeAreaView className='flex-1  '>
       <View className='flex-1   '>
       <ImageBackground
           resizeMode="cover"
@@ -40,6 +40,6 @@ export default function details() {
      
       
     </View>
-    </SafeAreaView>
+    // </SafeAreaView>
   )
 }

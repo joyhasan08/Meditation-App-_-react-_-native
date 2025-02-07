@@ -39,10 +39,11 @@ export default function HomeScreen() {
 
        
 
-         <View className="flex flex-row items-center justify-around">
+         <View className="flex flex-row items-center justify-around bg-black">
          <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2 w-fit  " href="/about"> 🛒 </Link>
          <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2 w-fit  " href="/about">Home </Link>
-         <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2 w-fit  " href="/about">Config </Link>
+         <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2 w-fit  " href="/about">Search </Link>
+         <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2 w-fit  " href="/about">Profile </Link>
          </View>
          {/* <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2 w-fit  " href="/about">about page</Link> */}
 
