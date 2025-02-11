@@ -9,7 +9,7 @@ export default function HomeScreen() {
             <Text className="text-xs font-bold pt-10 pb-4">
                Author:  Zarjij Hasan Joy 
             </Text>
-            <Button  title="Go Back"  />
+            <Button   title="Go Back"  />
             
         </View>
     
