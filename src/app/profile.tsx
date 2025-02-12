@@ -1,9 +1,10 @@
 import { View, Text, Image } from 'react-native';
 import React from 'react';
+import NavButtom from '../components/NavButtom';
 
 export default function Profile() {
   return (
-    <View className='flex-1'>
+    <View className='flex-1 '>
         <View className='gap-2 items-center bg-slate-400 justify-center p-4'>
             <Image height={500} width={100} resizeMode="contain" className="m-4" source={require("./../../assets/favicon.png")} />
             <Text className='text-xl font-bold'>Zarjij Hasan Joy</Text>
@@ -16,6 +17,10 @@ export default function Profile() {
             <Text className='text-4xl font-semibold'>Zarjij Hasan Joy</Text>
             <Text className='text-2xl font-normal text-gray-500'>Front-End Developer</Text>
             <Text className='text-2xl font-normal text-gray-500'>React Native Developer</Text>
+        </View>
+
+        <View className='fixed bottom-0 w-full'>
+        <NavButtom/>
         </View>
       
     </View>

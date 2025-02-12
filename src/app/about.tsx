@@ -1,5 +1,6 @@
 import { Button, Text } from "react-native";
 import { View,Image } from "react-native";
+import NavButtom from "../components/NavButtom";
 export default function HomeScreen() {
     return  (
         <View style={{flex:1,display:"flex",justifyContent:"center",alignItems:"center", backgroundColor:"#fff"}}>
@@ -10,7 +11,10 @@ export default function HomeScreen() {
                Author:  Zarjij Hasan Joy 
             </Text>
             <Button   title="Go Back"  />
-            
+
+            <View className="fixed bottom-0 w-full">
+            <NavButtom/>
+            </View>
         </View>
     
     )
