@@ -2,7 +2,7 @@ import { Link } from "expo-router";
 import { FlatList, Text, View, Image, SafeAreaView } from "react-native";
 import { meditation } from "../data";
 import { meditationList } from "../components/MeditationCard";
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 export default function HomeScreen() {
    return (
       <SafeAreaView className="bg-white flex-1">
@@ -22,6 +22,7 @@ export default function HomeScreen() {
                />
             </View>
          </View>
+         
 
          <FlatList
             className="h-5/6"
@@ -29,13 +30,17 @@ export default function HomeScreen() {
             data={meditation}
             renderItem={({ item }) => meditationList(item)}
          />
+       
+
+        
 
          {/* Bottom Navigation Bar */}
          <View className="flex flex-row items-center justify-around">
-            <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2" href="/">🏠 </Link>
-            <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2" href="/about">📖 </Link>
-            <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2" href="/search">🔍 </Link>
-            <Link className="text-xl font-bold p-4 text-blue-500 bg-green-300 rounded-xl m-2" href="/profile">👤 </Link>
+       
+            <Link className="text-xl font-bold p-4 m-2" href="/">  <Icon name="home" size={30} color="#000" /></Link>
+            <Link className="text-xl font-bold p-4 m-2" href="/about"> <Icon name="info" size={30} color="black" /> </Link>
+            <Link className="text-xl font-bold p-4 m-2" href="/profile"> <Icon name="person" size={30} color="black" /> </Link>
+            <Link className="text-xl font-bold p-4 m-2" href="/search"> <Icon name="search" size={30} color="black" /> </Link>
          </View>
       </SafeAreaView>
    );
