@@ -7,7 +7,8 @@ export const meditation: Meditation[] = [
         duration: 10, // in minutes
         description: 'A short session to help you start your day with a clear mind.',
         type: 'audio',
-        pro: false
+        pro: false,
+        quote: 'Inhale the present, exhale the past.'
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export const meditation: Meditation[] = [
         duration: 30, // in minutes
         description: 'A calming session to guide you into a peaceful sleep.',
         type: 'audio',
-        pro: true
+        pro: true,
+        quote: 'Let the day fall away like leaves from a tree.'
     },
     {
         id: 3,
@@ -23,7 +25,8 @@ export const meditation: Meditation[] = [
         duration: 20, // in minutes
         description: 'A guided session to help reduce stress and anxiety.',
         type: 'video',
-        pro: false
+        pro: false,
+        quote: 'Peace begins where expectation ends.'
     },
     {
         id: 4,
@@ -31,7 +34,8 @@ export const meditation: Meditation[] = [
         duration: 45, // in minutes
         description: 'A longer session focused on balancing your chakras and energy flow.',
         type: 'audio',
-        pro: true
+        pro: true,
+        quote: 'Align your breath, align your being.'
     },
     {
         id: 5,
@@ -39,7 +43,8 @@ export const meditation: Meditation[] = [
         duration: 15, // in minutes
         description: 'A brief session that teaches breathing techniques to improve focus.',
         type: 'video',
-        pro: false
+        pro: false,
+        quote: 'Where attention goes, breath follows.'
     },
     {
         id: 6,
@@ -47,7 +52,8 @@ export const meditation: Meditation[] = [
         duration: 25, // in minutes
         description: 'A meditation focused on cultivating self-love and compassion.',
         type: 'audio',
-        pro: false
+        pro: false,
+        quote: 'Speak to yourself as you would to someone you love.'
     },
     {
         id: 7,
@@ -55,7 +61,8 @@ export const meditation: Meditation[] = [
         duration: 30, // in minutes
         description: 'A guided session that helps you practice mindfulness while walking.',
         type: 'audio',
-        pro: false
+        pro: false,
+        quote: 'Each step is a homecoming.'
     },
     {
         id: 8,
@@ -63,7 +70,8 @@ export const meditation: Meditation[] = [
         duration: 20, // in minutes
         description: 'A calming session designed to help alleviate anxiety and stress.',
         type: 'video',
-        pro: false
+        pro: false,
+        quote: 'You are the sky; everything else is just weather.'
     },
     {
         id: 9,
@@ -71,7 +79,8 @@ export const meditation: Meditation[] = [
         duration: 40, // in minutes
         description: 'A session focused on relaxing the body through progressive muscle relaxation techniques.',
         type: 'audio',
-        pro: true
+        pro: true,
+        quote: 'Relax the body, and the mind will follow.'
     },
     {
         id: 10,
@@ -79,6 +88,7 @@ export const meditation: Meditation[] = [
         duration: 15, // in minutes
         description: 'A short practice to cultivate gratitude and appreciation in your life.',
         type: 'video',
-        pro: false
+        pro: false,
+        quote: 'Gratitude turns what we have into enough.'
     }
 ];
