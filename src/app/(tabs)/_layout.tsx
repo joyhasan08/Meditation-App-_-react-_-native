@@ -12,6 +12,13 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
+        name="break"
+        options={{
+          title: 'Break',
+          tabBarIcon: ({ color, size }) => <MaterialIcons name="timer" color={color} size={size} />,
+        }}
+      />
+      <Tabs.Screen
         name="about"
         options={{
           title: 'About',

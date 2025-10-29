@@ -56,16 +56,23 @@ export default function DetailsScreen() {
           </View>
 
           <View className='gap-2'>
-            <Text className='text-xl font-semibold'>Coming soon</Text>
-            <View className='bg-slate-50 border border-slate-200 rounded-xl p-4 gap-2'>
-              <View className='flex-row items-center gap-2'>
-                <MaterialIcons name='play-circle-outline' size={20} color={'#475569'} />
-                <Text className='text-slate-700'>Audio guidance</Text>
+            <Text className='text-xl font-semibold'>Audio Player (Preview)</Text>
+            <View className='bg-white border border-slate-200 rounded-2xl p-4 gap-3'>
+              <View className='flex-row items-center gap-3'>
+                <View className='w-12 h-12 rounded-full bg-teal-600 items-center justify-center'>
+                  <MaterialIcons name='play-arrow' size={28} color={'#fff'} />
+                </View>
+                <View className='flex-1'>
+                  <View className='h-2 bg-slate-200 rounded-full overflow-hidden'>
+                    <View className='h-2 w-1/3 bg-teal-600' />
+                  </View>
+                  <View className='flex-row justify-between mt-1'>
+                    <Text className='text-xs text-slate-500'>0:00</Text>
+                    <Text className='text-xs text-slate-500'>10:00</Text>
+                  </View>
+                </View>
               </View>
-              <View className='flex-row items-center gap-2'>
-                <MaterialIcons name='ondemand-video' size={20} color={'#475569'} />
-                <Text className='text-slate-700'>Video walkthrough</Text>
-              </View>
+              <Text className='text-slate-500 text-xs'>This is a placeholder UI — audio coming soon.</Text>
             </View>
           </View>
         </View>
