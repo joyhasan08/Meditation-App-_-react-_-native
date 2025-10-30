@@ -27,6 +27,21 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "9c17c80c-fda6-4a93-980e-cf176a471bea"
+      }
+    },
+    "owner": "zarjij_hasan_joy",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/9c17c80c-fda6-4a93-980e-cf176a471bea"
+    }
   }
 }

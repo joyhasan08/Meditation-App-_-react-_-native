@@ -24,7 +24,7 @@ export default function DetailsScreen() {
         <ImageBackground
           resizeMode='cover'
           className='w-full h-64'
-          source={require('./../../../assets/90114.jpg')}
+          source={require('./../../../assets/medi1.jpg')}
         >
           <View className='flex-1 bg-black/35 justify-end p-4'>
             <Text className='text-white text-3xl font-semibold'>{mediData.title}</Text>
