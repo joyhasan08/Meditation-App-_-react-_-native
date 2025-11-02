@@ -1,4 +1,5 @@
 import { SafeAreaView, ScrollView, View, Text, Image } from 'react-native';
+import { Link } from 'expo-router';
 
 export default function ProfileScreen() {
   return (
@@ -44,14 +45,18 @@ export default function ProfileScreen() {
             </View>
           </View>
 
-          <Text className='text-2xl font-semibold mt-2'>Settings</Text>
+          <Link href="/settings" className='text-2xl font-semibold mt-2'>Settings</Link>
           <View className='gap-3'>
+             <View className='bg-white border border-slate-200 rounded-xl p-4'>
+              <Link href="/settings" className='text-base'>Genaral </Link>
+            </View>
             <View className='bg-white border border-slate-200 rounded-xl p-4'>
               <Text className='text-base'>Notifications</Text>
             </View>
             <View className='bg-white border border-slate-200 rounded-xl p-4'>
               <Text className='text-base'>Reminder Time</Text>
             </View>
+            
           </View>
         </View>
       </ScrollView>
