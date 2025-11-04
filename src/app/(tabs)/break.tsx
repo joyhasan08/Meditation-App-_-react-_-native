@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Alert, Animated, Easing, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, Animated, Easing, SafeAreaView, Text, TextInput, TouchableOpacity, View, StyleSheet } from 'react-native';
+import MeditationHistory from '../../components/MeditationHistory';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -80,50 +81,60 @@ export default function BreakScreen() {
   );
 
   return (
-    <SafeAreaView className='flex-1 bg-white'>
-      <View className='p-6 gap-6'>
-        <View>
-          <Text className='text-3xl font-semibold'>Take a Break</Text>
-          <Text className='text-slate-600 mt-1'>Set a timer and breathe.</Text>
-        </View>
+    <View style={styles.container}>
+      <SafeAreaView className='flex-1 bg-white'>
+        <View className='p-6 gap-6'>
+          <View>
+            <Text className='text-3xl font-semibold'>Take a Break</Text>
+            <Text className='text-slate-600 mt-1'>Set a timer and breathe.</Text>
+          </View>
 
-        <View className='flex-row gap-2'>
-          {presets.map(m => (
-            <TouchableOpacity key={m} onPress={() => setMinutes(m)} className={`px-3 py-2 rounded-full border ${minutes === m ? 'bg-teal-600 border-teal-600' : 'bg-white border-slate-300'}`}>
-              <Text className={`${minutes === m ? 'text-white' : 'text-slate-700'}`}>{m} min</Text>
+          <View className='flex-row gap-2'>
+            {presets.map(m => (
+              <TouchableOpacity key={m} onPress={() => setMinutes(m)} className={`px-3 py-2 rounded-full border ${minutes === m ? 'bg-teal-600 border-teal-600' : 'bg-white border-slate-300'}`}>
+                <Text className={`${minutes === m ? 'text-white' : 'text-slate-700'}`}>{m} min</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+
+          <View className='flex-row items-center gap-2'>
+            <TextInput
+              keyboardType='number-pad'
+              placeholder='Custom minutes'
+              value={String(minutes)}
+              onChangeText={(t) => setMinutes(Number(t.replace(/[^0-9]/g, '')) || 0)}
+              className='flex-1 border border-slate-300 rounded-xl px-3 py-2'
+            />
+            <TouchableOpacity onPress={() => { /* minutes already bound */ }} className='px-4 py-2 rounded-xl bg-slate-100 border border-slate-300'>
+              <Text className='text-slate-700'>Apply</Text>
             </TouchableOpacity>
-          ))}
-        </View>
+          </View>
 
-        <View className='flex-row items-center gap-2'>
-          <TextInput
-            keyboardType='number-pad'
-            placeholder='Custom minutes'
-            value={String(minutes)}
-            onChangeText={(t) => setMinutes(Number(t.replace(/[^0-9]/g, '')) || 0)}
-            className='flex-1 border border-slate-300 rounded-xl px-3 py-2'
-          />
-          <TouchableOpacity onPress={() => { /* minutes already bound */ }} className='px-4 py-2 rounded-xl bg-slate-100 border border-slate-300'>
-            <Text className='text-slate-700'>Apply</Text>
-          </TouchableOpacity>
-        </View>
+          <View className='items-center gap-3 mt-2'>
+            <Text className='text-6xl font-light'>{formatTime(remaining)}</Text>
+            <View className='w-full h-3 bg-slate-200 rounded-full overflow-hidden'>
+              <Animated.View style={{ width: barWidth }} className='h-3 bg-teal-600' />
+            </View>
+          </View>
 
-        <View className='items-center gap-3 mt-2'>
-          <Text className='text-6xl font-light'>{formatTime(remaining)}</Text>
-          <View className='w-full h-3 bg-slate-200 rounded-full overflow-hidden'>
-            <Animated.View style={{ width: barWidth }} className='h-3 bg-teal-600' />
+          <View className='flex-row justify-center gap-3 pt-2'>
+            {!running ? (
+              <ControlButton label='Start' onPress={start} />
+            ) : (
+              <ControlButton label='Pause' onPress={pause} />
+            )}
+            <ControlButton label='Reset' onPress={reset} kind='secondary' />
           </View>
         </View>
-
-        <View className='flex-row justify-center gap-3 pt-2'>
-          {!running ? (
-            <ControlButton label='Start' onPress={start} />
-          ) : (
-            <ControlButton label='Pause' onPress={pause} />
-          )}
-          <ControlButton label='Reset' onPress={reset} kind='secondary' />
-        </View>
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+      <MeditationHistory />
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 16,
+  },
+});
